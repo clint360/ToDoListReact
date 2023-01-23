@@ -1,0 +1,42 @@
+.inputsection {
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+    font-size: 20px;
+    font-family: 'Poppins';
+}
+
+.inputsection p {
+    font-weight: 500px;
+    margin-right: 10px;
+}
+
+.inputsection input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.462);
+    padding: 1px 4px;
+    width: 210px;
+    margin-right: 20px;
+    font-size: 20px;
+    border-radius: 2px;
+    color: #fff;
+}
+
+.inputsection input::placeholder {
+    color: rgba(255, 255, 255, 0.454);
+} 
+
+.inputsection input:focus {
+    border: none;
+}
+
+.inputsection button {
+    padding: 2px 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    color: white;
+    background: rgba(128, 128, 128, 0.189);
+}

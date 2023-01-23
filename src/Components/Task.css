@@ -1,0 +1,32 @@
+.atask {
+    display: flex;
+    font-size: 20px;
+    padding-top: 5px;
+    border-top: 1px solid grey;
+    padding-bottom: 5px;
+}
+
+.atask input.defaultCheckbox {
+    width: 21px;
+    height: 21px;
+    display: flex;
+    align-items: centers;
+    background-color: black;
+}
+
+.atask input {
+    margin-right: 20px;
+}
+
+.atask p {
+    width: 300px;
+}
+
+.atask button {
+ background: rgba(0, 0, 0, 0.129);
+ padding: 4px 8px;
+ border: none;
+ border-radius: 5px;
+ color: #fff;
+ font-size: 20px;
+}

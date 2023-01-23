@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import Input from './Components/Input';
+import Task from './Components/Task';
 
 function App() {
+  const tasks = [{nme: "Clean the house"},{nme: "Eat"}, {nme: "Play"}, {nme: "Play Music"}]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>TO DO LIST</h1>
+      <Input />
+      <div className='Tasksection'>
+        {tasks.map(()=>{
+          return <Task name={tasks[2].nme}/>
+        })
+        }
+      </div>
     </div>
   );
 }
