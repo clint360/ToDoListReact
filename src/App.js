@@ -6,9 +6,9 @@ function App() {
   const inputRef = useRef(null);
   const [taskarray, setTaskArray] = useState([]);
   const handleSubmit = (e) => {
-    console.log(inputRef.current.value);
    const currentValue = inputRef.current.value;
    setTaskArray([...taskarray,currentValue]);
+  inputRef.current.value = '';
   }
   
   const deleteTask = (task) => {
