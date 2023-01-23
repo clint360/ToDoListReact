@@ -1,17 +1,33 @@
 import './App.css';
-import Input from './Components/Input';
 import Task from './Components/Task';
+import { useRef, useState } from 'react';
 
 function App() {
-  const tasks = [{nme: "Clean the house"},{nme: "Eat"}, {nme: "Play"}, {nme: "Play Music"}]
+  const inputRef = useRef(null);
+  const [taskarray, setTaskArray] = useState([]);
+  const handleSubmit = (e) => {
+    console.log(inputRef.current.value);
+   const currentValue = inputRef.current.value;
+   setTaskArray([...taskarray,currentValue]);
+  }
+  
+  const deleteTask = (task) => {
+    const x = taskarray.splice(task, 1);
+    setTaskArray([...taskarray]);
+  } 
+
   return (
     <div className="App">
       <h1>TO DO LIST</h1>
-      <Input />
+      <div className='inputsection'>
+     <p>Add Task:</p><input placeholder='input-task' ref={inputRef} name="task"/>
+     <button type='submit' onClick={handleSubmit}>✓</button>
+    </div>
       <div className='Tasksection'>
-        {tasks.map(()=>{
-          return <Task name={tasks[2].nme}/>
-        })
+        {taskarray.map((item, index)=>{
+          if (taskarray[index]==="") { return <></> } else {
+          return <Task name={item} deleteFunction={()=>{deleteTask(index)}}/>
+}})
         }
       </div>
     </div>

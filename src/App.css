@@ -24,3 +24,33 @@ body {
 .App h1 {
   text-align: center;
 }
+
+.inputsection {
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+  font-size: 19px;
+  font-family: 'Poppins';
+}
+
+.inputsection p {
+  font-weight: 500px;
+  margin-right: 10px;
+}
+
+.inputsection input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.462);
+  padding: 1px 4px;
+  width: 200px;
+  margin-right: 20px;
+  font-size: 20px;
+  border-radius: 2px;
+  color: #fff;
+}
+
+.inputsection input::placeholder {
+  color: rgba(255, 255, 255, 0.454);
+} 
