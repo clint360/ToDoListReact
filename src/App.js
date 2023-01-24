@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>TO DO LIST</h1>
+      <h1 contentEditable={true}>TO DO LIST</h1>
       <div className='inputsection'>
      <p>Add Task:</p><input placeholder='input-task' ref={inputRef} name="task"/>
      <button type='submit' onClick={handleSubmit}>✓</button>
