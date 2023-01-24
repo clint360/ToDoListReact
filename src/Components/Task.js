@@ -8,7 +8,7 @@ export default function Task({name, deleteFunction}) {
   const [checkstatus, setCheckstatus] = useState('⌛');
   const checkValue = () => {
     setChecked(!checked);
-     {checked ? setCheckstatus("⌛") : setCheckstatus("✅");
+     {checked ? setCheckstatus("⌛Incomplete") : setCheckstatus("✅Complete");
   } console.log(checkstatus);
   } 
 
